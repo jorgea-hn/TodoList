@@ -1,9 +1,11 @@
 "use client"
 import { useState } from "react"
+import {useRouter} from "next/navigation"
 
 function FormTask() {
     const [title,setTitle]= useState("")
     const [description,setDescription] = useState("")
+    const router = useRouter()
 
     const handledSubmit = async(e) =>{
         e.preventDefault();
@@ -16,6 +18,7 @@ function FormTask() {
         })
         const data = await res.json()
         console.log(data)
+        router.refresh()
     }
 
     return (
