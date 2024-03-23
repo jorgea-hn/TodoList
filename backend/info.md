@@ -31,3 +31,6 @@ creamos un archivo api o views y agregamos las rutas y permisos
 creamos un archivo urls y agregamos la ruta
 
 dentro de la aplicacion principal taskapi importamos la ruta de nuestra app
+
+instalamos django-cors-headers para tema de permisos del frontend
+python -m pip install django-cors-headers
